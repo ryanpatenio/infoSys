@@ -10,8 +10,16 @@
             @csrf
 
             <div>
-                <x-label for="name" value="{{ __('Name') }}" />
-                <x-input id="name" class="block mt-1 w-full" type="text" name="name" :value="old('name')" required autofocus autocomplete="name" />
+                <x-label for="First Name" value="{{ __('First Name') }}" />
+                <x-input id="fname" class="block mt-1 w-full" type="text" name="fname" :value="old('fname')" required autofocus autocomplete="fame" />
+            </div>
+            <div class="mt-4">
+                <x-label for="Middle Name" value="{{ __('Middle Name') }}" />
+                <x-input id="midname" class="block mt-1 w-full" type="text" name="midname" :value="old('midname')" required autofocus autocomplete="midname" />
+            </div>
+            <div class="mt-4">
+                <x-label for="Last Name" value="{{ __('Last Name') }}" />
+                <x-input id="lname" class="block mt-1 w-full" type="text" name="lname" :value="old('lname')" required autofocus autocomplete="lname" />
             </div>
 
             <div class="mt-4">

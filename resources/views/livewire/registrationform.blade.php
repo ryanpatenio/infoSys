@@ -32,14 +32,20 @@
           <div class="sm:col-span-3">
             <label for="first-name" class="block text-sm font-medium leading-6 text-gray-200">First name</label>
             <div class="mt-2">
-              <input type="text" name="first-name" id="first-name" autocomplete="given-name" class="block w-full rounded-md border-0 py-1.5 text-black shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6">
+              <input type="text" value="{{ Auth::user()->fname }}" name="first-name" id="first-name" autocomplete="given-name" class="block w-full rounded-md border-0 py-1.5 text-black shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6">
             </div>
           </div>
   
           <div class="sm:col-span-3">
+            <label for="middle-name" class="block text-sm font-medium leading-6 text-gray-200">Middle name</label>
+            <div class="mt-2">
+              <input type="text" value="{{ Auth::user()->midname }}" name="midname" id="midname" autocomplete="family-name" class="block w-full rounded-md border-0 py-1.5 text-black shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6">
+            </div>
+          </div>
+          <div class="sm:col-span-6">
             <label for="last-name" class="block text-sm font-medium leading-6 text-gray-200">Last name</label>
             <div class="mt-2">
-              <input type="text" name="last-name" id="last-name" autocomplete="family-name" class="block w-full rounded-md border-0 py-1.5 text-black shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6">
+              <input type="text" value="{{ Auth::user()->lname }}" name="last-name" id="last-name" autocomplete="family-name" class="block w-full rounded-md border-0 py-1.5 text-black shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6">
             </div>
           </div>
   
@@ -58,8 +64,40 @@
               </select>
             </div>
           </div>
-  
           <div class="sm:col-span-3">
+            <label for="occupation" class="block text-sm font-medium leading-6 text-gray-200">Occupation</label>
+            <div class="mt-2">
+              <input type="text" class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:max-w-xs sm:text-sm sm:leading-6">
+            </div>
+          </div>
+          <div class="sm:col-span-3">
+            <label for="Birthday" class="block text-sm font-medium leading-6 text-gray-200">Birthday</label>
+            <div class="mt-2">
+              <input type="date" name="bday" class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:max-w-xs sm:text-sm sm:leading-6">
+            </div>
+          </div>
+          <div class="sm:col-span-3">
+            <label for="Birthday" class="block text-sm font-medium leading-6 text-gray-200">Contact Number</label>
+            <div class="mt-2">
+              <input type="text" name="contact" class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:max-w-xs sm:text-sm sm:leading-6">
+            </div>
+          </div>
+          <div class="sm:col-span-3">
+            <label for="Birthday" class="block text-sm font-medium leading-6 text-gray-200">Blood Type</label>
+            <div class="mt-2">
+              <select id="bloodtype" name="bloodtype" autocomplete="blood-type" class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:max-w-xs sm:text-sm sm:leading-6">
+                <option class="O+">O+</option>
+                <option class="O-">O-</option>
+                <option class="A+">A+</option>
+                <option class="A-">A-</option>
+                <option class="B+">B+</option>
+                <option class="B-">B-</option>
+                
+              </select>
+            </div>
+          </div>
+  
+          <div class="sm:col-span-2">
             <label for="country" class="block text-sm font-medium leading-6 text-gray-200">Country</label>
             <div class="mt-2">
               <select id="country" name="country" autocomplete="country-name" class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:max-w-xs sm:text-sm sm:leading-6">
@@ -78,9 +116,15 @@
               </select>
             </div>
           </div>
+          <div class="sm:col-span-2">
+            <label for="Age" class="block text-sm font-medium leading-6 text-gray-200">Age</label>
+            <div class="mt-2">
+              <input type="number" name="age" id="age" autocomplete="age" class="block w-full rounded-md border-0 py-1.5 text-black shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6">
+            </div>
+          </div>
   
           <div class="col-span-full">
-            <label for="street-address" class="block text-sm font-medium leading-6 text-gray-200">Street address</label>
+            <label for="Permanent-address" class="block text-sm font-medium leading-6 text-gray-200">Permanent address</label>
             <div class="mt-2">
               <input type="text" name="street-address" id="street-address" autocomplete="street-address" class="block w-full rounded-md border-0 py-1.5 text-black shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6">
             </div>
