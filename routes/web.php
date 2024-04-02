@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Livewire\registrationform;
 
 /*
 |--------------------------------------------------------------------------
@@ -25,7 +26,11 @@ Route::middleware([
     Route::get('/dashboard', function () {
         return view('dashboard');
     })->name('dashboard');
+
+    Route::get('/form',registrationform::class)->name('reg.form');
 });
+
+
 
 Route::get('/sample',function(){
     return view('sample');
