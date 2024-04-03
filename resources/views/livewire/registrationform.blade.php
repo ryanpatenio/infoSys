@@ -52,7 +52,7 @@
           <div class="sm:col-span-4">
             <label for="email" class="block text-sm font-medium leading-6 text-gray-200">Email address</label>
             <div class="mt-2">
-              <input id="email" name="email" type="email" autocomplete="email" class="block w-full rounded-md border-0 py-1.5 text-black shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6">
+              <input id="email" value="{{ Auth::user()->email }}" name="email" type="email" autocomplete="email" class="block w-full rounded-md border-0 py-1.5 text-black shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6">
             </div>
           </div>
           <div class="sm:col-span-2">
@@ -129,27 +129,45 @@
               <input type="text" name="street-address" id="street-address" autocomplete="street-address" class="block w-full rounded-md border-0 py-1.5 text-black shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6">
             </div>
           </div>
+          <div class="sm:col-span-3 sm:col-start-1">
+            <label for="region" class="block text-sm font-medium leading-6 text-gray-200">Region</label>
+            <div class="mt-2">
+              <select id="region" class=" bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full py-2">
+                <option value="region1">Region 1</option>
+                <option value="region2">Region 2</option>
+                <option value="region3">Region 3</option>
+              </select>
+            </div>
+          </div>
+          <div class="sm:col-span-3">
+            <label for="provinces" class="block text-sm font-medium leading-6 text-gray-200">State / Province</label>
+            <div class="mt-2">
+              <select id="province" class=" bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full py-2">
+                <option value="province1">Negros Province</option>
+                <option value="province2">Iloilo Province</option>
+                <option value="province3">Capiz Province</option>
+              </select>
+            </div>
+          </div>
   
-          <div class="sm:col-span-2 sm:col-start-1">
+          <div class="sm:col-span-3 sm:col-start-1">
             <label for="city" class="block text-sm font-medium leading-6 text-gray-200">City</label>
             <div class="mt-2">
-              <input type="text" name="city" id="city" autocomplete="address-level2" class="block w-full rounded-md border-0 py-1.5 text-black shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6">
+              <select id="city" class=" bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full py-2">
+                <option value="city1">City 1</option>
+                <option value="city2">City 2</option>
+                <option value="city3">City 3</option>
+              </select>
             </div>
           </div>
   
-          <div class="sm:col-span-2">
-            <label for="region" class="block text-sm font-medium leading-6 text-gray-200">State / Province</label>
-            <div class="mt-2">
-              <input type="text" name="region" id="region" autocomplete="address-level1" class="block w-full rounded-md border-0 py-1.5 text-black shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6">
-            </div>
-          </div>
-  
-          <div class="sm:col-span-2">
+          <div class="sm:col-span-3">
             <label for="postal-code" class="block text-sm font-medium leading-6 text-gray-200">ZIP / Postal code</label>
             <div class="mt-2">
               <input type="text" name="postal-code" id="postal-code" autocomplete="postal-code" class="block w-full rounded-md border-0 py-1.5 text-black shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6">
             </div>
           </div>
+
         </div>
       </div>
 
