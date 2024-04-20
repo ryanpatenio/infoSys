@@ -23,9 +23,9 @@ return new class extends Migration
             $table->string('status');
             $table->string('age');
             $table->string('address');
-            $table->string('city');
-            $table->string('province');
-            $table->string('zipcode');
+            $table->foreignId('region_id')->references('id')->on('regions')->onDelete('cascade')->onUpdate('cascade');
+            $table->foreignId('province_id')->references('id')->on('provinces')->onDelete('cascade')->onUpdate('cascade');
+            $table->foreignId('city_id')->references('id')->on('cities')->onDelete('cascade')->onUpdate('cascade');
 
             $table->timestamps();
         });

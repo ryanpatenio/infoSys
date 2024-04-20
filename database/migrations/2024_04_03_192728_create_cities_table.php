@@ -14,7 +14,7 @@ return new class extends Migration
     {
         Schema::create('cities', function (Blueprint $table) {
             $table->id();
-            $table->foreignIdFor(Provinces::class);
+            $table->foreignId('province_id')->references('id')->on('provinces')->onDelete('cascade')->onUpdate('cascade');
             $table->string('name');
             $table->string('zipcode');
             $table->timestamps();

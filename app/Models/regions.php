@@ -4,7 +4,8 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
-use Illuminate\Database\Eloquent\Relations\HasManyThrough;
+//use Illuminate\Database\Eloquent\Relations\HasMany;
+
 
 class regions extends Model
 {
@@ -14,15 +15,10 @@ class regions extends Model
         'name'    
     ];
 
-     /**
-     * Get all of the comments for the regions
-     *
-     * @return \Illuminate\Database\Eloquent\Relations\HasManyThrough
-     */
-    public function cities(): HasManyThrough
-    {
-        return $this->hasManyThrough(Cities::class, Provinces::class);
-    }
+    // public function Provinces() : HasMany
+    // {
+    //     return $this->hasMany(Provinces::class);
+    // }
 
 
 }

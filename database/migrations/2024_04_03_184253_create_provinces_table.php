@@ -15,7 +15,7 @@ return new class extends Migration
         //child of regions
         Schema::create('provinces', function (Blueprint $table) {
             $table->id();
-            $table->foreignIdFor(Regions::class);
+            $table->foreignId('region_id')->references('id')->on('regions')->onDelete('cascade')->onUpdate('cascade');
             $table->string('name');
             $table->timestamps();
         });
